@@ -52,8 +52,8 @@ const Waether = () => {
             />
             <button
               onClick={citySearch}
-              className="rounded-md w-[5rem] ml-5 sm:ml-3 py-2 font-semibold mt-4 text-white bg-[#1a4dda]"
-            >
+              className="hover:bg-[#000] rounded-md w-[6rem] ml-5 sm:ml-3 py-2 font-semibold mt-4 text-white bg-[#0000009d]"
+              >
               {" "}
               Pesquisar
             </button>
