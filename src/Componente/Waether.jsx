@@ -12,7 +12,7 @@ const Waether = () => {
 
   const citySearch = () => {
     fetch(
-      `http://api.weatherapi.com/v1/current.json?key=234a6641e2e542bb925213945232502&q=${name}&lang=pt`
+      `https://api.weatherapi.com/v1/current.json.?key=234a6641e2e542bb925213945232502&q=${name}&lang=pt`
     )
       .then((response) => {
         if (response.status == 200) {
