@@ -12,7 +12,7 @@ const Waether = () => {
 
   const citySearch = () => {
     fetch(
-      `https://api.weatherapi.com/v1/current.json.?key=234a6641e2e542bb925213945232502&q=${name}&lang=pt`
+      `http://api.weatherapi.com/v1/current.json?key=234a6641e2e542bb925213945232502&q=${name}&lang=pt`
     )
       .then((response) => {
         if (response.status == 200) {
@@ -34,9 +34,9 @@ const Waether = () => {
         <header className="bg-[#ffffff0e] w-screen text-center  pb-5 pt-5 text-[#f3f3f3] font-extralight text-3xl rounded-lg ">
           <h1> Previsão do Tempo</h1>
         </header>
-        <main className="w-screen h-[50rem]  flex justify-center items-center">
-          <div className="h-[40rem] w-[90rem] ml-10 bg-none sm:bg-[#fdfcfc05] rounded-sm text-start justify-center flex flex-col">
-            <h1 className="font-semibold ml-2 sm:ml-0  text-3xl px-4 text-[#fffcfc] sm:text-4xl">
+        <main className="w-screen h-screen bg-[#ffffff00] flex justify-center items-center">
+          <div className="h-[32rem] mb-[10rem]  w-[90rem] ml-10 rounded-sm text-start justify-center flex flex-col">
+            <h1 className="font-semibold ml-2 sm:ml-0  text-3xl px-4 text-[#ffffff] sm:text-4xl">
               {" "}
               Verifique agora a previsão do tempo da sua cidade!{" "}
             </h1>
@@ -46,13 +46,13 @@ const Waether = () => {
               <br className="ml-10" /> e em seguida clique em pesquisar{" "}
             </h1>
             <input
-              className="border border-gray-400 p-2 sm:w-[30rem] w-[15rem] ml-5 sm:ml-3 rounded-md focus:outline-none focus:border-indigo-500 focus:shadow-outline-indigo"
+              className="border border-gray-400 p-2 sm:w-[30rem] w-[15rem] ml-5 sm:ml-3 rounded-md focus:outline-none focus:border-blue-400 focus:shadow-outline-indigo"
               onChange={nameChange}
               value={name}
             />
             <button
               onClick={citySearch}
-              className="hover:bg-[#000] rounded-md w-[6rem] ml-5 sm:ml-3 py-2 font-semibold mt-4 text-white bg-[#0000009d]"
+              className="hover:bg-blue-500 duration-200 rounded-md w-[6rem] ml-5 sm:ml-3 py-2 font-semibold mt-4 text-white bg-[#0000009d]"
               >
               {" "}
               Pesquisar
